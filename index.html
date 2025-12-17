@@ -1,31 +1,55 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio de Hervé Noukpo - Développeur Full Stack Ruby on Rails & JavaScript">
-    <title>Hervé Noukpo - Full Stack Developer</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Hervé Noukpo - Full Stack Developer spécialisé en Ruby on Rails et JavaScript">
+    <title>Hervé Noukpo | Full Stack Developer</title>
+    
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar">
+    <nav class="nav">
         <div class="container">
             <div class="nav-content">
-                <a href="#" class="logo">
-                    <span class="prompt">~$</span> noukpo-herve.dev
+                <a href="#" class="nav-logo">
+                    <span class="logo-light">HN</span>
+                    <span class="logo-dark">~$</span>
                 </a>
+                
                 <div class="nav-links">
-                    <a href="#about">$ whoami</a>
-                    <a href="#skills">$ skills</a>
-                    <a href="#experience">$ experience</a>
-                    <a href="#projects">$ projects</a>
-                    <a href="#contact">$ contact</a>
+                    <a href="#about" class="nav-link">À propos</a>
+                    <a href="#experience" class="nav-link">Expérience</a>
+                    <a href="#skills" class="nav-link">Compétences</a>
+                    <a href="#projects" class="nav-link">Projets</a>
+                    <a href="#contact" class="nav-link">Contact</a>
                 </div>
-                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+                
+                <button class="mobile-toggle" id="mobileToggle">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -37,66 +61,268 @@
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="container">
-            <div class="terminal-window">
-                <div class="terminal-header">
-                    <div class="terminal-buttons">
-                        <span class="btn-close"></span>
-                        <span class="btn-minimize"></span>
-                        <span class="btn-maximize"></span>
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="hero-badge">Disponible pour stage alterné</div>
+                    <h1 class="hero-title">
+                        <span class="title-line">Hervé Noukpo</span>
+                        <span class="title-line gradient-text">Full Stack Developer</span>
+                    </h1>
+                    <p class="hero-description">
+                        Développeur passionné avec <strong>6+ années d'expérience</strong> en Ruby on Rails et JavaScript. 
+                        Spécialisé en architectures API et intégrations IA.
+                    </p>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <span class="stat-number">5+</span>
+                            <span class="stat-label">Années</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">10+</span>
+                            <span class="stat-label">Projets</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">95%</span>
+                            <span class="stat-label">Rails</span>
+                        </div>
                     </div>
-                    <div class="terminal-title">herve@noukpo:~</div>
+                    <div class="hero-actions">
+                        <a href="#contact" class="btn btn-primary">Me contacter</a>
+                        <a href="cv.pdf" class="btn btn-secondary" download>Télécharger CV</a>
+                    </div>
                 </div>
-                <div class="terminal-body">
-                    <div class="command-line">
-                        <span class="prompt">~$</span>
-                        <span class="command">whoami</span>
+                
+                <div class="hero-terminal">
+                    <div class="terminal">
+                        <div class="terminal-header">
+                            <div class="terminal-dots">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <span class="terminal-title">herve@dev:~</span>
+                        </div>
+                        <div class="terminal-body">
+                            <div class="terminal-line">
+                                <span class="prompt">$</span>
+                                <span class="command">whoami</span>
+                            </div>
+                            <div class="terminal-output">Hervé Noukpo - Full Stack Developer</div>
+                            
+                            <div class="terminal-line">
+                                <span class="prompt">$</span>
+                                <span class="command">cat skills.txt</span>
+                            </div>
+                            <div class="terminal-output">Ruby on Rails (95%), React, TypeScript, PostgreSQL</div>
+                            
+                            <div class="terminal-line">
+                                <span class="prompt">$</span>
+                                <span class="command typing"></span>
+                                <span class="cursor">▋</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="output">
-                        <h1 class="name"># Noukpo Hervé Houndjetode</h1>
-                        <p class="title">Full Stack Developer | Ruby on Rails & JavaScript Specialist</p>
-                    </div>
-                    
-                    <div class="command-line">
-                        <span class="prompt">~$</span>
-                        <span class="command">cat bio.txt</span>
-                    </div>
-                    <div class="output">
-                        <p>Étudiant en Master Expert Architecture des Logiciels à l'IMIE Paris.</p>
-                        <p>6+ années d'expérience en développement full-stack avec Ruby on Rails,</p>
-                        <p>JavaScript/TypeScript et intégrations API modernes.</p>
-                        <p>Spécialisé dans les architectures scalables et l'intégration d'IA.</p>
-                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                    <div class="command-line">
-                        <span class="prompt">~$</span>
-                        <span class="command">echo $STATUS</span>
+    <!-- About Section -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Qui suis-je</span>
+                <h2 class="section-title">À propos</h2>
+            </div>
+            
+            <div class="about-grid">
+                <div class="about-card glass">
+                    <div class="about-content">
+                        <p>
+                            Développeur full-stack passionné avec plus de <strong>6 années d'expérience</strong> 
+                            dans la création d'applications web modernes et performantes.
+                        </p>
+                        <p>
+                            Actuellement en <strong>Master Expert Architecture des Logiciels</strong> à l'IMIE Paris, 
+                            je recherche un stage en alternance (1 semaine cours / 3 semaines entreprise).
+                        </p>
+                        <p>
+                            Expertise : <strong>Ruby on Rails</strong>, <strong>JavaScript/TypeScript</strong>, 
+                            architectures API RESTful et intégrations IA (OpenAI API).
+                        </p>
                     </div>
-                    <div class="output">
-                        <p class="status-highlight">🎯 Disponible pour stage alterné (1 semaine cours / 3 semaines entreprise)</p>
-                        <p>📍 Chessy, France | 🌍 Remote-friendly</p>
+                </div>
+                
+                <div class="info-grid">
+                    <div class="info-item glass">
+                        <div class="info-icon">📍</div>
+                        <div class="info-text">
+                            <div class="info-label">Localisation</div>
+                            <div class="info-value">Chessy, France</div>
+                        </div>
                     </div>
+                    <div class="info-item glass">
+                        <div class="info-icon">💼</div>
+                        <div class="info-text">
+                            <div class="info-label">Expérience</div>
+                            <div class="info-value">5+ années</div>
+                        </div>
+                    </div>
+                    <div class="info-item glass">
+                        <div class="info-icon">🎓</div>
+                        <div class="info-text">
+                            <div class="info-label">Formation</div>
+                            <span>Developpement IA & Devops</span>
+                            <div class="info-value">Master IMIE</div>
+                        </div>
+                    </div>
+                    <div class="info-item glass">
+                        <div class="info-icon">⚡</div>
+                        <div class="info-text">
+                            <div class="info-label">Spécialité</div>
+                            <div class="info-value">Rails 95%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-                    <div class="command-line">
-                        <span class="prompt">~$</span>
-                        <span class="command">ls ./quick-links</span>
+    <!-- Experience Section -->
+    <section class="section section-alt" id="experience">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Parcours professionnel</span>
+                <h2 class="section-title">Expérience</h2>
+            </div>
+            
+            <div class="timeline">
+                <!-- Experience 1 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content glass">
+                        <div class="exp-header">
+                            <div class="exp-title-group">
+                                <h3 class="exp-title">Middle Software Engineer</h3>
+                                <p class="exp-company">TAMA</p>
+                            </div>
+                            <div class="exp-meta">
+                                <span class="exp-period">Juil 2024 - Août 2025</span>
+                                <span class="exp-location">France, Remote</span>
+                            </div>
+                        </div>
+                        <p class="exp-description">
+                            <strong><a href="http://liretama.com">liretama.com</a></strong> - Plateforme e-commerce spécialisée dans la vente de livres numériques.
+                        </p>
+                        <ul class="exp-list">
+                            <li>Développement fonctionnalités full-stack avec Next.js et REST API</li>
+                            <li>Optimisation performances et amélioration UX</li>
+                            <li>Collaboration design pour transformer maquettes en applications</li>
+                        </ul>
+                        <div class="tech-stack">
+                            <span>React</span>
+                            <span>Next.js</span>
+                            <span>TypeScript</span>
+                            <span>Supabase</span>
+                            <span>CI/CD</span>
+                        </div>
                     </div>
-                    <div class="output links-output">
-                        <a href="/mnt/user-data/uploads/Noukpo_CV_Generale.pdf" class="terminal-link" download>
-                            <span class="link-icon">📄</span> CV_Noukpo_Herve.pdf
-                        </a>
-                        <a href="https://www.linkedin.com/in/noukpohervehoundjetode/" class="terminal-link" target="_blank">
-                            <span class="link-icon">🔗</span> linkedin.com/in/noukpohervehoundjetode
-                        </a>
-                        <a href="mailto:noukpoherve@hotmail.com" class="terminal-link">
-                            <span class="link-icon">📧</span> noukpoherve@hotmail.com
-                        </a>
+                </div>
+                
+                <!-- Experience 2 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content glass">
+                        <div class="exp-header">
+                            <div class="exp-title-group">
+                                <h3 class="exp-title">Full Stack Developer</h3>
+                                <p class="exp-company">Procurement Freelancers</p>
+                            </div>
+                            <div class="exp-meta">
+                                <span class="exp-period">Avr 2019 - Juin 2024</span>
+                                <span class="exp-location">Bruxelles, Remote</span>
+                            </div>
+                        </div>
+                        <p class="exp-description">
+                            <strong><a href="http://procurementfreelancers.com">procurementfreelancers.com</a></strong> - Plateforme mondiale de freelances professionnels des achats.
+                        </p>
+                        <ul class="exp-list">
+                            <li>Architecture et maintenance API RESTful modernes</li>
+                            <li>Intégration ChatGPT API pour traitement intelligent de données</li>
+                            <li>Intégration Algolia pour amélioration des recherches</li>
+                        </ul>
+                        <div class="tech-stack">
+                            <span>Ruby on Rails</span>
+                            <span>OpenAI API</span>
+                            <span>PostgreSQL</span>
+                            <span>Algolia</span>
+                            <span>ElasticSearch</span>
+                        </div>
                     </div>
-
-                    <div class="command-line typing">
-                        <span class="prompt">~$</span>
-                        <span class="command" id="typingCommand"></span>
-                        <span class="cursor">_</span>
+                </div>
+                
+                <!-- Experience 3 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content glass">
+                        <div class="exp-header">
+                            <div class="exp-title-group">
+                                <h3 class="exp-title">Full Stack Developer</h3>
+                                <p class="exp-company">Intside</p>
+                            </div>
+                            <div class="exp-meta">
+                                <span class="exp-period">Fév 2016 - Avr 2019</span>
+                                <span class="exp-location">Cotonou, Bénin</span>
+                            </div>
+                        </div>
+                        <p class="exp-description">
+                            <strong><a href="http://intside.com">intside.com</a></strong>  Agence de développement de solution numérique: Web design, Applications Mobiles, Marketing Digital.
+                        </p>
+                        <ul class="exp-list">
+                            <li>Développement thèmes WordPress personnalisés</li>
+                            <li>Création API modernes pour applications web et mobiles</li>
+                            <li>Optimisations SEO et développement Ruby on Rails</li>
+                        </ul>
+                        <div class="tech-stack">
+                            <span>Ruby on Rails</span>
+                            <span>WordPress</span>
+                            <span>JavaScript</span>
+                            <span>NodeJs</span>
+                            <span>PostgreSQL</span>
+                        </div>
                     </div>
+                </div>
+            </div>
+            
+            <!-- Education -->
+            <div class="section-header" style="margin-top: 5rem;">
+                <span class="section-label">Cursus académique</span>
+                <h2 class="section-title">Formation</h2>
+            </div>
+            
+            <div class="education-grid">
+                <div class="education-card glass">
+                    <div class="edu-icon">🎓</div>
+                    <h3 class="edu-title">Master Développement IA & Devops</h3>
+                    <p class="edu-school">IMIE - Paris, France</p>
+                    <p class="edu-period">Nov 2025 - En cours</p>
+                    <span class="edu-badge badge-primary">En Continue</span>
+                </div>
+                
+                <div class="education-card glass">
+                    <div class="edu-icon">🔐</div>
+                    <h3 class="edu-title">Master Sécurité Informatique</h3>
+                    <p class="edu-school">ESGIS - Cotonou, Bénin</p>
+                    <p class="edu-period">Nov 2023 - Août 2024</p>
+                    <span class="edu-badge badge-success">Diplômé</span>
+                </div>
+                
+                <div class="education-card glass">
+                    <div class="edu-icon">💻</div>
+                    <h3 class="edu-title">Licence Architecture Logiciel</h3>
+                    <p class="edu-school">ESGIS - Cotonou, Bénin</p>
+                    <p class="edu-period">Jan 2013 - Jan 2015</p>
+                    <span class="edu-badge badge-success">Mention Bien</span>
                 </div>
             </div>
         </div>
@@ -106,512 +332,276 @@
     <section class="section" id="skills">
         <div class="container">
             <div class="section-header">
-                <div class="command-line">
-                    <span class="prompt">~$</span>
-                    <span class="command">cat tech-stack.json</span>
-                </div>
+                <span class="section-label">Technologies maîtrisées</span>
+                <h2 class="section-title">Compétences</h2>
             </div>
-
+            
             <div class="skills-grid">
-                <!-- Backend -->
-                <div class="skill-category">
-                    <h3 class="category-title">
-                        <span class="bracket">{</span> "backend": [
-                    </h3>
-                    <div class="skills-list">
-                        <div class="skill-item">
-                            <span class="skill-icon">💎</span>
+                <div class="skill-category glass">
+                    <h3 class="skill-category-title">Backend</h3>
+                    <div class="skill-item">
+                        <div class="skill-info">
                             <span class="skill-name">Ruby on Rails</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 95%"></div>
-                            </div>
-                            <span class="skill-percent">95%</span>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-icon">🐍</span>
-                            <span class="skill-name">Python</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 75%"></div>
-                            </div>
                             <span class="skill-percent">75%</span>
                         </div>
-                        <div class="skill-item">
-                            <span class="skill-icon">🔌</span>
+                        <div class="skill-bar">
+                            <div class="skill-fill" data-percent="75"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">Python</span>
+                            <span class="skill-percent">45%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-fill" data-percent="45"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
                             <span class="skill-name">REST API</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 90%"></div>
-                            </div>
-                            <span class="skill-percent">90%</span>
+                            <span class="skill-percent">60%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-fill" data-percent="60"></div>
                         </div>
                     </div>
-                    <span class="bracket">]</span>
                 </div>
-
-                <!-- Frontend -->
-                <div class="skill-category">
-                    <h3 class="category-title">
-                        <span class="bracket">{</span> "frontend": [
-                    </h3>
-                    <div class="skills-list">
-                        <div class="skill-item">
-                            <span class="skill-icon">⚛️</span>
-                            <span class="skill-name">React.js / Next.js</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 88%"></div>
-                            </div>
-                            <span class="skill-percent">88%</span>
+                
+                <div class="skill-category glass">
+                    <h3 class="skill-category-title">Frontend</h3>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">React / Next.js</span>
+                            <span class="skill-percent">48%</span>
                         </div>
-                        <div class="skill-item">
-                            <span class="skill-icon">⚡</span>
+                        <div class="skill-bar">
+                            <div class="skill-fill" data-percent="48"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
                             <span class="skill-name">Stimulus.js</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 85%"></div>
-                            </div>
                             <span class="skill-percent">85%</span>
                         </div>
-                        <div class="skill-item">
-                            <span class="skill-icon">💅</span>
+                        <div class="skill-bar">
+                            <div class="skill-fill" data-percent="85"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
                             <span class="skill-name">Tailwind / Bootstrap</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 90%"></div>
-                            </div>
                             <span class="skill-percent">90%</span>
                         </div>
-                        <div class="skill-item">
-                            <span class="skill-icon">📝</span>
-                            <span class="skill-name">TypeScript</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 82%"></div>
-                            </div>
-                            <span class="skill-percent">82%</span>
+                        <div class="skill-bar">
+                            <div class="skill-fill" data-percent="90"></div>
                         </div>
                     </div>
-                    <span class="bracket">]</span>
                 </div>
-
-                <!-- Database & Cloud -->
-                <div class="skill-category">
-                    <h3 class="category-title">
-                        <span class="bracket">{</span> "database_cloud": [
-                    </h3>
-                    <div class="skills-list">
-                        <div class="skill-item">
-                            <span class="skill-icon">🐘</span>
+                
+                <div class="skill-category glass">
+                    <h3 class="skill-category-title">Database</h3>
+                    <div class="skill-item">
+                        <div class="skill-info">
                             <span class="skill-name">PostgreSQL</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 90%"></div>
-                            </div>
-                            <span class="skill-percent">90%</span>
+                            <span class="skill-percent">80%</span>
                         </div>
-                        <div class="skill-item">
-                            <span class="skill-icon">🍃</span>
+                        <div class="skill-bar">
+                            <div class="skill-fill" data-percent="80"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
                             <span class="skill-name">MongoDB</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 80%"></div>
-                            </div>
-                            <span class="skill-percent">80%</span>
+                            <span class="skill-percent">60%</span>
                         </div>
-                        <div class="skill-item">
-                            <span class="skill-icon">🔥</span>
+                        <div class="skill-bar">
+                            <div class="skill-fill" data-percent="60"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
                             <span class="skill-name">Supabase</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 85%"></div>
-                            </div>
-                            <span class="skill-percent">85%</span>
+                            <span class="skill-percent">75%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-fill" data-percent="85"></div>
                         </div>
                     </div>
-                    <span class="bracket">]</span>
                 </div>
-
-                <!-- DevOps & Tools -->
-                <div class="skill-category">
-                    <h3 class="category-title">
-                        <span class="bracket">{</span> "devops_tools": [
-                    </h3>
-                    <div class="skills-list">
-                        <div class="skill-item">
-                            <span class="skill-icon">🐳</span>
-                            <span class="skill-name">Docker</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 85%"></div>
-                            </div>
+                
+                <div class="skill-category glass">
+                    <h3 class="skill-category-title">DevOps & Cloud</h3>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">Docker / AWS / Heroku</span>
                             <span class="skill-percent">85%</span>
                         </div>
-                        <div class="skill-item">
-                            <span class="skill-icon">☁️</span>
-                            <span class="skill-name">Heroku / AWS</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 80%"></div>
-                            </div>
+                        <div class="skill-bar">
+                            <div class="skill-fill" data-percent="85"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">GitHub Actions</span>
                             <span class="skill-percent">80%</span>
                         </div>
-                        <div class="skill-item">
-                            <span class="skill-icon">⚙️</span>
-                            <span class="skill-name">CI/CD</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 83%"></div>
-                            </div>
-                            <span class="skill-percent">83%</span>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-icon">🔍</span>
-                            <span class="skill-name">ElasticSearch / Algolia</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 78%"></div>
-                            </div>
-                            <span class="skill-percent">78%</span>
+                        <div class="skill-bar">
+                            <div class="skill-fill" data-percent="80"></div>
                         </div>
                     </div>
-                    <span class="bracket">]</span>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">CI/CD</span>
+                            <span class="skill-percent">63%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-fill" data-percent="63"></div>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- AI & CMS -->
-                <div class="skill-category">
-                    <h3 class="category-title">
-                        <span class="bracket">{</span> "special_skills": [
-                    </h3>
-                    <div class="skills-list">
-                        <div class="skill-item">
-                            <span class="skill-icon">🤖</span>
-                            <span class="skill-name">OpenAI API Integration</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 87%"></div>
-                            </div>
-                            <span class="skill-percent">87%</span>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-icon">📰</span>
-                            <span class="skill-name">WordPress Dev</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 88%"></div>
-                            </div>
-                            <span class="skill-percent">88%</span>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-icon">🎯</span>
-                            <span class="skill-name">Agile / Scrum</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 85%"></div>
-                            </div>
+                <div class="skill-category glass">
+                    <h3 class="skill-category-title">Intelligence Artificielle</h3>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">ClaudeAI</span>
                             <span class="skill-percent">85%</span>
                         </div>
-                    </div>
-                    <span class="bracket">]</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section class="section" id="experience">
-        <div class="container">
-            <div class="section-header">
-                <div class="command-line">
-                    <span class="prompt">~$</span>
-                    <span class="command">cat work-history.log | tail -n 3</span>
-                </div>
-            </div>
-
-            <div class="timeline">
-                <!-- Experience 1 -->
-                <div class="timeline-item">
-                    <div class="timeline-marker">
-                        <span class="timeline-icon">💼</span>
-                    </div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h3 class="position">Middle Software Engineer</h3>
-                            <span class="company">TAMA</span>
-                            <span class="period">Juillet 2024 - Août 2025</span>
-                            <span class="location">📍 France, Remote</span>
+                        <div class="skill-bar">
+                            <div class="skill-fill" data-percent="85"></div>
                         </div>
-                        <div class="timeline-description">
-                            <p class="project-desc">
-                                <strong>liretama.com</strong> - Plateforme e-commerce spécialisée dans la vente de livres numériques
-                            </p>
-                            <div class="achievements">
-                                <p>// Missions principales:</p>
-                                <ul>
-                                    <li>✓ Développement de fonctionnalités full-stack avec Next.js et intégrations REST API</li>
-                                    <li>✓ Optimisation des performances et amélioration de l'expérience utilisateur</li>
-                                    <li>✓ Maintenance et amélioration continue pour assurer sécurité et bon fonctionnement</li>
-                                    <li>✓ Collaboration avec les équipes de design pour transformer maquettes en applications</li>
-                                    <li>✓ Debugging continu pour maintenir la disponibilité de l'application</li>
-                                    <li>✓ Rédaction de documentation technique et amélioration des performances</li>
-                                </ul>
-                            </div>
-                            <div class="tech-tags">
-                                <span class="tech-tag">React.js</span>
-                                <span class="tech-tag">Next.js</span>
-                                <span class="tech-tag">TypeScript</span>
-                                <span class="tech-tag">Supabase</span>
-                                <span class="tech-tag">CI/CD</span>
-                            </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">OpenAI API</span>
+                            <span class="skill-percent">77%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-fill" data-percent="77"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">Cursor</span>
+                            <span class="skill-percent">63%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-fill" data-percent="63"></div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Experience 2 -->
-                <div class="timeline-item">
-                    <div class="timeline-marker">
-                        <span class="timeline-icon">💼</span>
-                    </div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h3 class="position">Senior Full Stack Developer</h3>
-                            <span class="company">Procurement Freelancers</span>
-                            <span class="period">Avril 2019 - Juin 2024</span>
-                            <span class="location">📍 Bruxelles, Remote</span>
+                <div class="skill-category glass">
+                    <h3 class="skill-category-title">CMS</h3>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">WordPress</span>
+                            <span class="skill-percent">80%</span>
                         </div>
-                        <div class="timeline-description">
-                            <p class="project-desc">
-                                <strong>procurementfreelancers.com</strong> - Plateforme mondiale de freelances reliant des professionnels des achats à des entreprises
-                            </p>
-                            <div class="achievements">
-                                <p>// Réalisations clés:</p>
-                                <ul>
-                                    <li>✓ Collaboration avec PM et équipe de 5 ingénieurs (data services, infra, dev tools)</li>
-                                    <li>✓ Architecture, construction et maintenance d'API RESTful modernes</li>
-                                    <li>✓ Intégration ChatGPT API pour extraction et traitement intelligent de données</li>
-                                    <li>✓ Intégration Algolia pour amélioration des recherches</li>
-                                    <li>✓ Optimisation des requêtes liées à la base de données</li>
-                                    <li>✓ Refactorisation du code pour améliorer la maintenabilité</li>
-                                </ul>
-                            </div>
-                            <div class="tech-tags">
-                                <span class="tech-tag">Ruby on Rails</span>
-                                <span class="tech-tag">JavaScript</span>
-                                <span class="tech-tag">Bootstrap</span>
-                                <span class="tech-tag">OpenAI API</span>
-                                <span class="tech-tag">PostgreSQL</span>
-                                <span class="tech-tag">Algolia</span>
-                                <span class="tech-tag">WordPress</span>
-                            </div>
+                        <div class="skill-bar">
+                            <div class="skill-fill" data-percent="80"></div>
                         </div>
                     </div>
-                </div>
-
-                <!-- Experience 3 -->
-                <div class="timeline-item">
-                    <div class="timeline-marker">
-                        <span class="timeline-icon">💼</span>
-                    </div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h3 class="position">Full Stack Developer</h3>
-                            <span class="company">Intside</span>
-                            <span class="period">Février 2016 - Avril 2019</span>
-                            <span class="location">📍 Cotonou, Bénin</span>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">Shopify</span>
+                            <span class="skill-percent">77%</span>
                         </div>
-                        <div class="timeline-description">
-                            <p class="project-desc">
-                                Agence de services web : développement web, design graphique, applications mobiles, marketing digital, SEO
-                            </p>
-                            <div class="achievements">
-                                <p>// Contributions principales:</p>
-                                <ul>
-                                    <li>✓ Audit technique de sites existants (performance, sécurité, structure code)</li>
-                                    <li>✓ Développement de thèmes WordPress personnalisés (HTML, CSS, JavaScript)</li>
-                                    <li>✓ Développement de plugins custom selon besoins spécifiques</li>
-                                    <li>✓ Création d'API modernes liées à des applications web et mobiles</li>
-                                    <li>✓ Implémentation d'optimisations SEO techniques</li>
-                                    <li>✓ Développement d'applications web avec Ruby on Rails</li>
-                                </ul>
-                            </div>
-                            <div class="tech-tags">
-                                <span class="tech-tag">Ruby on Rails</span>
-                                <span class="tech-tag">WordPress</span>
-                                <span class="tech-tag">JavaScript</span>
-                                <span class="tech-tag">PostgreSQL</span>
-                                <span class="tech-tag">SEO</span>
-                            </div>
+                        <div class="skill-bar">
+                            <div class="skill-fill" data-percent="77"></div>
                         </div>
                     </div>
-                </div>
-            </div>
-
-            <!-- Education -->
-            <div class="section-header" style="margin-top: 4rem;">
-                <div class="command-line">
-                    <span class="prompt">~$</span>
-                    <span class="command">cat education.json</span>
-                </div>
-            </div>
-
-            <div class="education-grid">
-                <div class="education-card">
-                    <div class="edu-icon">🎓</div>
-                    <h3>Master Expert Architecture des Logiciels</h3>
-                    <p class="school">IMIE - Paris, France</p>
-                    <p class="period">Novembre 2025 - En cours</p>
-                    <p class="status">📚 Formation en alternance</p>
-                </div>
-
-                <div class="education-card">
-                    <div class="edu-icon">🔐</div>
-                    <h3>Master Sécurité Informatique</h3>
-                    <p class="school">ESGIS - Cotonou, Bénin</p>
-                    <p class="period">Novembre 2023 - Août 2024</p>
-                    <p class="status">✅ Diplômé</p>
-                </div>
-
-                <div class="education-card">
-                    <div class="edu-icon">💻</div>
-                    <h3>Licence Architecture Logiciel</h3>
-                    <p class="school">ESGIS - Cotonou, Bénin</p>
-                    <p class="period">Janvier 2013 - Janvier 2015</p>
-                    <p class="status">✅ Mention Bien</p>
+                    <div class="skill-item">
+                        <div class="skill-info">
+                            <span class="skill-name">Prestashop</span>
+                            <span class="skill-percent">63%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-fill" data-percent="63"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Projects Section -->
-    <section class="section" id="projects">
+    <section class="section section-alt" id="projects">
         <div class="container">
             <div class="section-header">
-                <div class="command-line">
-                    <span class="prompt">~$</span>
-                    <span class="command">ls ./projects --detailed</span>
-                </div>
+                <span class="section-label">Réalisations</span>
+                <h2 class="section-title">Projets</h2>
             </div>
-
+            
             <div class="projects-grid">
-                <!-- Project 1: TAMA -->
-                <div class="project-card">
-                    <div class="project-header">
-                        <div class="project-icon">📚</div>
-                        <h3 class="project-name">Lire TAMA - E-commerce Livres</h3>
+                <!-- Project 1 -->
+                <div class="project-card glass">
+                    <div class="project-icon">📚</div>
+                    <h3 class="project-title">TAMA - E-commerce Livres</h3>
+                    <p class="project-description">
+                        Plateforme e-commerce moderne pour la vente de livres numériques avec bibliothèque personnelle.
+                    </p>
+                    <div class="tech-stack">
+                        <span>Next.js</span>
+                        <span>React</span>
+                        <span>TypeScript</span>
+                        <span>Supabase</span>
                     </div>
-                    <div class="project-description">
-                        <p>Plateforme e-commerce moderne spécialisée dans la vente de livres numériques avec système de paiement intégré et gestion des bibliothèques utilisateurs.</p>
-                    </div>
-                    <div class="project-achievements">
-                        <h4>// Fonctionnalités clés:</h4>
-                        <ul>
-                            <li>✓ Architecture full-stack avec Next.js et TypeScript</li>
-                            <li>✓ Intégration Supabase pour backend et authentification</li>
-                            <li>✓ Système de paiement sécurisé</li>
-                            <li>✓ Bibliothèque personnelle avec lecteur intégré</li>
-                            <li>✓ Interface responsive et optimisée</li>
-                            <li>✓ CI/CD pour déploiements automatisés</li>
-                        </ul>
-                    </div>
-                    <div class="project-tags">
-                        <span class="tag">Next.js</span>
-                        <span class="tag">React</span>
-                        <span class="tag">TypeScript</span>
-                        <span class="tag">Supabase</span>
-                        <span class="tag">REST API</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://liretama.com" target="_blank" class="project-link">
-                            <span>→ visit liretama.com</span>
-                        </a>
-                    </div>
+                    <a href="https://liretama.com" target="_blank" class="project-link">
+                        Visiter le site →
+                    </a>
                 </div>
-
-                <!-- Project 2: Procurement Freelancers -->
-                <div class="project-card">
-                    <div class="project-header">
-                        <div class="project-icon">💼</div>
-                        <h3 class="project-name">Procurement Freelancers</h3>
+                
+                <!-- Project 2 -->
+                <div class="project-card glass">
+                    <div class="project-icon">💼</div>
+                    <h3 class="project-title">Procurement Freelancers</h3>
+                    <p class="project-description">
+                        Plateforme mondiale connectant des professionnels des achats avec des entreprises via matching IA.
+                    </p>
+                    <div class="tech-stack">
+                        <span>Rails</span>
+                        <span>OpenAI</span>
+                        <span>PostgreSQL</span>
+                        <span>Algolia</span>
                     </div>
-                    <div class="project-description">
-                        <p>Plateforme mondiale connectant des professionnels des achats freelances avec des entreprises, incluant matching intelligent et gestion de missions.</p>
-                    </div>
-                    <div class="project-achievements">
-                        <h4>// Réalisations techniques:</h4>
-                        <ul>
-                            <li>✓ Architecture API RESTful scalable avec Ruby on Rails</li>
-                            <li>✓ Intégration ChatGPT pour matching intelligent candidats/missions</li>
-                            <li>✓ Algolia Search pour recherche avancée temps réel</li>
-                            <li>✓ Système de notifications et messagerie intégrée</li>
-                            <li>✓ Dashboard analytics pour clients et freelances</li>
-                            <li>✓ Optimisation bases de données pour haute performance</li>
-                        </ul>
-                    </div>
-                    <div class="project-tags">
-                        <span class="tag">Ruby on Rails</span>
-                        <span class="tag">JavaScript</span>
-                        <span class="tag">OpenAI API</span>
-                        <span class="tag">PostgreSQL</span>
-                        <span class="tag">Algolia</span>
-                        <span class="tag">Bootstrap</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="https://procurementfreelancers.com" target="_blank" class="project-link">
-                            <span>→ visit procurementfreelancers.com</span>
-                        </a>
-                    </div>
+                    <a href="https://procurementfreelancers.com" target="_blank" class="project-link">
+                        Visiter le site →
+                    </a>
                 </div>
-
-                <!-- Project 3: WordPress Custom Solutions -->
-                <div class="project-card">
-                    <div class="project-header">
-                        <div class="project-icon">🎨</div>
-                        <h3 class="project-name">WordPress Custom Solutions</h3>
+                
+                <!-- Project 3 -->
+                <div class="project-card glass">
+                    <div class="project-icon">🎨</div>
+                    <h3 class="project-title">WordPress Custom Solutions</h3>
+                    <p class="project-description">
+                        Thèmes et plugins WordPress sur-mesure pour sites corporatifs et e-commerce.
+                    </p>
+                    <div class="tech-stack">
+                        <span>WordPress</span>
+                        <span>PHP</span>
+                        <span>JavaScript</span>
+                        <span>SEO</span>
                     </div>
-                    <div class="project-description">
-                        <p>Développement de thèmes et plugins WordPress personnalisés pour divers clients d'Intside, incluant sites corporatifs, e-commerce et portfolios.</p>
-                    </div>
-                    <div class="project-achievements">
-                        <h4>// Expertise développée:</h4>
-                        <ul>
-                            <li>✓ Thèmes WordPress sur-mesure (HTML, CSS, JS, PHP)</li>
-                            <li>✓ Plugins custom pour fonctionnalités spécifiques</li>
-                            <li>✓ Optimisation SEO technique (vitesse, structure, meta)</li>
-                            <li>✓ Intégrations e-commerce WooCommerce</li>
-                            <li>✓ Migration et maintenance de sites existants</li>
-                            <li>✓ Audit de performance et sécurité</li>
-                        </ul>
-                    </div>
-                    <div class="project-tags">
-                        <span class="tag">WordPress</span>
-                        <span class="tag">PHP</span>
-                        <span class="tag">JavaScript</span>
-                        <span class="tag">SEO</span>
-                        <span class="tag">WooCommerce</span>
-                    </div>
-                    <div class="project-links">
-                        <span class="project-link disabled">
-                            <span>// Multiples projets clients</span>
-                        </span>
-                    </div>
+                    <a href="https://intside.com" target="_blank" class="project-link">
+                        Visiter le site →
+                    </a>
                 </div>
-
-                <!-- Project 4: API Integrations -->
-                <div class="project-card">
-                    <div class="project-header">
-                        <div class="project-icon">🔌</div>
-                        <h3 class="project-name">APIs & Microservices</h3>
-                    </div>
-                    <div class="project-description">
-                        <p>Conception et développement d'APIs RESTful modernes pour applications web et mobiles, avec focus sur performance et scalabilité.</p>
-                    </div>
-                    <div class="project-achievements">
-                        <h4>// Compétences appliquées:</h4>
-                        <ul>
-                            <li>✓ Architecture RESTful avec Ruby on Rails</li>
-                            <li>✓ Documentation API avec Swagger/OpenAPI</li>
-                            <li>✓ Authentification JWT et OAuth</li>
-                            <li>✓ Rate limiting et gestion de cache</li>
-                            <li>✓ Monitoring avec Sentry et AppSignal</li>
-                            <li>✓ Tests automatisés avec RSpec</li>
-                        </ul>
-                    </div>
-                    <div class="project-tags">
-                        <span class="tag">Ruby on Rails</span>
-                        <span class="tag">REST API</span>
-                        <span class="tag">JWT</span>
-                        <span class="tag">RSpec</span>
-                        <span class="tag">PostgreSQL</span>
-                        <span class="tag">Redis</span>
-                    </div>
-                    <div class="project-links">
-                        <span class="project-link disabled">
-                            <span>// Multiples APIs développées</span>
-                        </span>
+                
+                <!-- Project 4 -->
+                <div class="project-card glass">
+                    <div class="project-icon">🔌</div>
+                    <h3 class="project-title">APIs & Microservices</h3>
+                    <p class="project-description">
+                        APIs RESTful modernes avec focus sur performance, scalabilité et documentation complète.
+                    </p>
+                    <div class="tech-stack">
+                        <span>Ruby on Rails</span>
+                        <span>REST</span>
+                        <span>JWT</span>
+                        <span>DeviseAuth Token</span>
+                        <span>PostgreSQL</span>
                     </div>
                 </div>
             </div>
@@ -622,105 +612,51 @@
     <section class="section" id="contact">
         <div class="container">
             <div class="section-header">
-                <div class="command-line">
-                    <span class="prompt">~$</span>
-                    <span class="command">cat contact-info.yml</span>
+                <span class="section-label">Restons en contact</span>
+                <h2 class="section-title">Me contacter</h2>
+            </div>
+            
+            <div class="contact-grid">
+                <div class="contact-card glass">
+                    <div class="contact-icon">✉️</div>
+                    <h3 class="contact-title">Email</h3>
+                    <a href="mailto:noukpoherve@hotmail.com" class="contact-value">noukpoherve@hotmail.com</a>
+                </div>
+                
+                <div class="contact-card glass">
+                    <div class="contact-icon">📱</div>
+                    <h3 class="contact-title">Téléphone</h3>
+                    <a href="tel:+33636386023" class="contact-value">+33 6 36 38 60 23</a>
+                </div>
+                
+                <div class="contact-card glass">
+                    <div class="contact-icon">💼</div>
+                    <h3 class="contact-title">LinkedIn</h3>
+                    <a href="https://www.linkedin.com/in/noukpohervehoundjetode/" target="_blank" class="contact-value">linkedin.com/in/noukpohervehoundjetode</a>
+                </div>
+                
+                <div class="contact-card glass">
+                    <div class="contact-icon">💻</div>
+                    <h3 class="contact-title">GitHub</h3>
+                    <a href="https://github.com/noukpoherve" target="_blank" class="contact-value">github.com/noukpoherve</a>
+                </div>
+                
+                <div class="contact-card glass">
+                    <div class="contact-icon">📍</div>
+                    <h3 class="contact-title">Localisation</h3>
+                    <p class="contact-value">Chessy (77700), France</p>
+                </div>
+                
+                <div class="contact-card glass">
+                    <div class="contact-icon">📄</div>
+                    <h3 class="contact-title">CV</h3>
+                    <a href="cv.pdf" download class="contact-value">Télécharger mon CV</a>
                 </div>
             </div>
-
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <div class="info-item">
-                        <div class="command-line">
-                            <span class="prompt">~$</span>
-                            <span class="command">echo $LOCATION</span>
-                        </div>
-                        <div class="output">
-                            <p class="info-value">📍 Chessy (77700), France</p>
-                            <p class="info-detail">Remote-friendly | Disponible en Île-de-France</p>
-                        </div>
-                    </div>
-
-                    <div class="info-item">
-                        <div class="command-line">
-                            <span class="prompt">~$</span>
-                            <span class="command">cat contact.email</span>
-                        </div>
-                        <div class="output">
-                            <a href="mailto:noukpoherve@hotmail.com" class="info-link">
-                                noukpoherve@hotmail.com
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="info-item">
-                        <div class="command-line">
-                            <span class="prompt">~$</span>
-                            <span class="command">echo $PHONE</span>
-                        </div>
-                        <div class="output">
-                            <a href="tel:+33636386023" class="info-link">
-                                +33 6 36 38 60 23
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="info-item">
-                        <div class="command-line">
-                            <span class="prompt">~$</span>
-                            <span class="command">ls ./social-links</span>
-                        </div>
-                        <div class="output social-links">
-                            <a href="https://www.linkedin.com/in/noukpohervehoundjetode/" target="_blank" class="social-link">
-                                <span class="link-icon">🔗</span> LinkedIn
-                            </a>
-                            <a href="https://github.com/noukpoherve" target="_blank" class="social-link">
-                                <span class="link-icon">💻</span> GitHub
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="info-item">
-                        <div class="command-line">
-                            <span class="prompt">~$</span>
-                            <span class="command">cat availability.txt</span>
-                        </div>
-                        <div class="output">
-                            <p class="availability">
-                                <span class="status-dot">🟢</span> Disponible pour stage alterné
-                            </p>
-                            <p class="info-detail">Rythme: 1 semaine cours / 3 semaines entreprise</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="contact-form-wrapper">
-                    <div class="command-line">
-                        <span class="prompt">~$</span>
-                        <span class="command">./send-message.sh</span>
-                    </div>
-                    <form class="contact-form" id="contactForm">
-                        <div class="form-group">
-                            <label>$ name:</label>
-                            <input type="text" name="name" placeholder="Votre nom" required>
-                        </div>
-                        <div class="form-group">
-                            <label>$ email:</label>
-                            <input type="email" name="email" placeholder="votre.email@example.com" required>
-                        </div>
-                        <div class="form-group">
-                            <label>$ subject:</label>
-                            <input type="text" name="subject" placeholder="Sujet du message" required>
-                        </div>
-                        <div class="form-group">
-                            <label>$ message:</label>
-                            <textarea name="message" rows="5" placeholder="Votre message..." required></textarea>
-                        </div>
-                        <button type="submit" class="submit-btn">
-                            <span class="prompt">~$</span> send()
-                        </button>
-                    </form>
-                </div>
+            
+            <div class="availability-card glass">
+                <div class="availability-dot"></div>
+                <p>Disponible pour stage alterné (1 semaine cours / 3 semaines entreprise)</p>
             </div>
         </div>
     </section>
@@ -729,16 +665,25 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <div class="command-line">
-                    <span class="prompt">~$</span>
-                    <span class="command">exit 0</span>
+                <p class="footer-text">© 2024 Hervé Noukpo. Tous droits réservés.</p>
+                <div class="footer-links">
+                    <a href="https://www.linkedin.com/in/noukpohervehoundjetode/" target="_blank" aria-label="LinkedIn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                        </svg>
+                    </a>
+                    <a href="https://github.com/noukpoherve" target="_blank" aria-label="GitHub">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                    </a>
+                    <a href="mailto:noukpoherve@hotmail.com" aria-label="Email">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                    </a>
                 </div>
-                <p class="copyright">
-                    © 2024 Noukpo Hervé Houndjetode. Built with 💎 Ruby on Rails & ☕ Coffee
-                </p>
-                <p class="footer-note">
-                    // "Talk is cheap. Show me the code." - Linus Torvalds
-                </p>
             </div>
         </div>
     </footer>
